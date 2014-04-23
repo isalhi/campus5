@@ -1,0 +1,56 @@
+<%= form_for(@activity) do |f| %>
+  <% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% @activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <!--id activity y id creator no deben ser desplegados en la form. Deben ser producidos por el controller -->
+
+    <!-- <div class="field">
+      <%= f.label :id_activity %><br>
+      <%= f.text_field :id_activity %>
+    </div>
+  -->
+   
+    
+    <!-- es solo un reminder importante -->
+
+  <div class="field">
+    <%= f.label :id_location %><br>
+    <%= f.text_field :id_location %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :cathegory %><br>
+    <%= f.text_field :cathegory %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, :rows => 15 %>
+  </div>
+  <div class="field">
+    <%= f.label :privacy %><br>
+    <%= f.check_box :privacy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

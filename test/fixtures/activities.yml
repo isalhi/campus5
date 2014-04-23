@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_activity: MyString
+  id_creator: MyString
+  id_location: MyString
+  name: MyString
+  date: MyString
+  duration: MyString
+  cathegory: MyString
+  description: MyString
+  privacy: false
+
+two:
+  id_activity: MyString
+  id_creator: MyString
+  id_location: MyString
+  name: MyString
+  date: MyString
+  duration: MyString
+  cathegory: MyString
+  description: MyString
+  privacy: false

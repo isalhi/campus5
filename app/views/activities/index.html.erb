@@ -1,0 +1,42 @@
+<p><%= link_to 'User List', users_path %></p>
+<signin><%= link_to 'Sign In!', new_session_path %></signin>
+<signup><%= link_to 'Not a user yet?', new_user_path %></signup>
+<h1>Current Activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id creator</th>
+      <th>Id location</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Duration</th>
+      <th>Cathegory</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.id_creator %></td>
+        <td><%= activity.id_location %></td>
+        <td><%= activity.name %></td>
+        <td><%= activity.date %></td>
+        <td><%= activity.duration %></td>
+        <td><%= activity.cathegory %></td>
+        <td><%= activity.description %></td>
+        <td><%= link_to 'Show', activity %></td>
+        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity', new_activity_path %>
